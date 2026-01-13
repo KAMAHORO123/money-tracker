@@ -70,7 +70,8 @@ function ContributorList({ contributors, onUpdate, onDelete, remaining, totalCon
                       {contributor.cleared ? '✓ Cleared' : '⏳ Pending'}
                     </span>
                   </td>
-                  <td>
+                  <td className="actions-cell">
+                    <div className="actions-group">
                     {isEditing ? (
                       <>
                         <button
@@ -95,7 +96,7 @@ function ContributorList({ contributors, onUpdate, onDelete, remaining, totalCon
                             setEditingId(null)
                             setEditAmount('')
                           }}
-                          className="cancel-btn"
+                          className="secondary-btn"
                         >
                           Cancel
                         </button>
@@ -110,7 +111,7 @@ function ContributorList({ contributors, onUpdate, onDelete, remaining, totalCon
                               console.error(err)
                             }
                           }}
-                          className="toggle-btn"
+                          className="primary-btn"
                         >
                           {contributor.cleared ? 'Mark Pending' : 'Mark Cleared'}
                         </button>
@@ -119,7 +120,7 @@ function ContributorList({ contributors, onUpdate, onDelete, remaining, totalCon
                             setEditingId(contributor.id)
                             setEditAmount(contributor.amount.toString())
                           }}
-                          className="edit-btn"
+                          className="secondary-btn"
                         >
                           Edit
                         </button>
@@ -131,13 +132,14 @@ function ContributorList({ contributors, onUpdate, onDelete, remaining, totalCon
                               console.error(err)
                             }
                           }}
-                          className="delete-btn"
+                          className="tertiary-btn"
                         >
                           Delete
                         </button>
                       </>
                     )}
-                </td>
+                    </div>
+                  </td>
               </tr>
               )
             })}

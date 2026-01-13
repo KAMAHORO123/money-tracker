@@ -28,7 +28,7 @@ table {
 }
 
 thead {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #1e3a8a;
   color: white;
 }
 
@@ -40,19 +40,6 @@ th {
 
 tbody tr {
   border-bottom: 1px solid #e5e7eb;
-  transition: background-color 0.2s;
-}
-
-tbody tr:hover {
-  background-color: #f9fafb;
-}
-
-tbody tr.cleared {
-  background-color: #f0fdf4;
-}
-
-tbody tr.pending {
-  background-color: #fef3c7;
 }
 
 td {
@@ -66,16 +53,17 @@ td {
   border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 600;
+  border: 1px solid #1d4ed8;
 }
 
 .status-badge.cleared {
-  background-color: #10b981;
-  color: white;
+  background-color: #eff6ff;
+  color: #1d4ed8;
 }
 
 .status-badge.pending {
-  background-color: #f59e0b;
-  color: white;
+  background-color: #eef2ff;
+  color: #1d4ed8;
 }
 
 .remaining-badge {
@@ -87,22 +75,21 @@ td {
 }
 
 .remaining-badge.due {
-  background-color: #fef3c7;
-  color: #b45309;
-  border: 1px solid #fcd34d;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
 }
 
 .remaining-badge.settled {
-  background-color: #ecfdf3;
-  color: #0f5132;
-  border: 1px solid #bbf7d0;
+  background-color: #eef2ff;
+  color: #1d4ed8;
+  border: 1px solid #c7d2fe;
 }
 
-.toggle-btn,
-.delete-btn,
-.edit-btn,
-.save-btn,
-.cancel-btn {
+.primary-btn,
+.secondary-btn,
+.tertiary-btn,
+.save-btn {
   padding: 6px 12px;
   margin-right: 8px;
   border: none;
@@ -110,42 +97,45 @@ td {
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
-.toggle-btn {
-  background-color: #667eea;
+.primary-btn {
+  background-color: #1d4ed8;
   color: white;
 }
 
-.toggle-btn:hover {
-  background-color: #5568d3;
+.primary-btn:hover {
+  background-color: #1e40af;
 }
 
-.delete-btn {
-  background-color: #ef4444;
-  color: white;
+.secondary-btn {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
 }
 
-.delete-btn:hover {
-  background-color: #dc2626;
+.secondary-btn:hover {
+  background-color: #dbeafe;
 }
 
-.edit-btn {
-  background-color: #0ea5e9;
-  color: white;
+.tertiary-btn {
+  background-color: transparent;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
 }
 
-.edit-btn:hover {
-  background-color: #0284c7;
+.tertiary-btn:hover {
+  background-color: #eff6ff;
 }
 
 .save-btn {
-  background-color: #10b981;
+  background-color: #1d4ed8;
   color: white;
 }
 
 .save-btn:hover {
-  background-color: #059669;
+  background-color: #1e40af;
 }
 
 .cancel-btn {
@@ -205,7 +195,7 @@ td {
 
 .table-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(90deg, #1d4ed8 0%, #1e40af 100%);
   transition: width 0.4s ease;
 }
 
@@ -218,7 +208,7 @@ td {
 .remaining-info {
   margin-top: 20px;
   padding: 16px;
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  background: #eff6ff;
   border-radius: 8px;
   text-align: center;
 }
@@ -230,7 +220,7 @@ td {
 }
 
 .remaining-info strong {
-  color: #dc2626;
+  color: #1d4ed8;
   font-size: 1.2rem;
 }
 
@@ -243,15 +233,22 @@ td {
     padding: 8px;
   }
   
-  .toggle-btn,
-  .delete-btn,
-  .edit-btn,
-  .save-btn,
-  .cancel-btn {
+  .primary-btn,
+  .secondary-btn,
+  .tertiary-btn,
+  .save-btn {
     padding: 4px 8px;
     font-size: 0.75rem;
     margin-bottom: 4px;
-    display: block;
-    width: 100%;
   }
+}
+
+.actions-cell {
+  text-align: right;
+}
+
+.actions-group {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: nowrap;
 }
