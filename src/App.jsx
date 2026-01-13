@@ -115,33 +115,31 @@ function App() {
       {loading && <div className="status-banner info">Loading contributors from the database...</div>}
 
       <div className="app-content">
-        <div className="left-panel">
-          <SummaryStats 
-            totalContributed={totalContributed}
-            totalPending={totalPending}
-            remaining={remaining}
-            goalAmount={GOAL_AMOUNT}
-          />
-          <ProgressChart 
-            totalContributed={totalContributed}
-            goalAmount={GOAL_AMOUNT}
-          />
-        </div>
+        <SummaryStats 
+          totalContributed={totalContributed}
+          totalPending={totalPending}
+          remaining={remaining}
+          goalAmount={GOAL_AMOUNT}
+        />
 
-        <div className="right-panel">
-          <ContributorForm onAdd={addContributor} />
-          <ContributorList 
-            contributors={contributors}
-            onUpdate={updateContributor}
-            onDelete={deleteContributor}
-            remaining={remaining}
-            totalContributed={totalContributed}
-            totalPending={totalPending}
-            goalAmount={GOAL_AMOUNT}
-            perPersonTarget={PER_PERSON_TARGET}
-            loading={loading}
-          />
-        </div>
+        <ProgressChart 
+          totalContributed={totalContributed}
+          goalAmount={GOAL_AMOUNT}
+        />
+
+        <ContributorForm onAdd={addContributor} />
+
+        <ContributorList 
+          contributors={contributors}
+          onUpdate={updateContributor}
+          onDelete={deleteContributor}
+          remaining={remaining}
+          totalContributed={totalContributed}
+          totalPending={totalPending}
+          goalAmount={GOAL_AMOUNT}
+          perPersonTarget={PER_PERSON_TARGET}
+          loading={loading}
+        />
       </div>
     </div>
   )

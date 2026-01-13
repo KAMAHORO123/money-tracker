@@ -10,7 +10,7 @@ function ProgressChart({ totalContributed, goalAmount }) {
     { name: 'Remaining', value: remaining }
   ]
 
-  const COLORS = ['#10b981', '#e5e7eb']
+  const COLORS = ['#1d4ed8', '#e5e7eb']
 
   return (
     <div className="progress-chart">
