@@ -1,0 +1,257 @@
+.contributor-list {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contributor-list h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-style: italic;
+}
+
+.contributors-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+tbody tr.cleared {
+  background-color: #f0fdf4;
+}
+
+tbody tr.pending {
+  background-color: #fef3c7;
+}
+
+td {
+  padding: 12px;
+  color: #333;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.cleared {
+  background-color: #10b981;
+  color: white;
+}
+
+.status-badge.pending {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.remaining-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.remaining-badge.due {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fcd34d;
+}
+
+.remaining-badge.settled {
+  background-color: #ecfdf3;
+  color: #0f5132;
+  border: 1px solid #bbf7d0;
+}
+
+.toggle-btn,
+.delete-btn,
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-btn {
+  background-color: #667eea;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #5568d3;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.edit-btn {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0284c7;
+}
+
+.save-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #059669;
+}
+
+.cancel-btn {
+  background-color: #9ca3af;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #6b7280;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.summary-row {
+  background-color: #f9fafb;
+}
+
+.summary-row-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+}
+
+.summary-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.table-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.table-progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  transition: width 0.4s ease;
+}
+
+.table-progress-label {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.remaining-info {
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.remaining-info p {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.remaining-info strong {
+  color: #dc2626;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .contributors-table {
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: 8px;
+  }
+  
+  .toggle-btn,
+  .delete-btn,
+  .edit-btn,
+  .save-btn,
+  .cancel-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    display: block;
+    width: 100%;
+  }
+}
